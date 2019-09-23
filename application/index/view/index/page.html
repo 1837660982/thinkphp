@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div>
+            <div><h1>{$chapter.title}</h1></div>
+            <br>
+            <br>
+            <div>{neq name="$chapter.pre_page" value='0'}<a href="{:url('page',['page_id'=>$chapter.pre_page])}">上一页</a>{/neq}  {neq name="$chapter.nex_page" value='0'}<a  href="{:url('page',['page_id'=>$chapter.nex_page])}">下一页</a>{/neq}</div>
+            <p>
+                {:trim($content,'"')}
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div>
+            {volist name='book' id='v'}
+            <a href="{:url('index/index/page',['page_id'=>$v.page_id])}">{$v.title}</a>
+            <br>
+            {/volist}
+        </div>
+    </body>
+</html>

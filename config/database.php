@@ -15,11 +15,11 @@ return [
     // 服务器地址
     'hostname'        => '119.23.48.84',
     // 数据库名
-    'database'        => 'shop',
+    'database'        => 'book',
     // 用户名
-    'username'        => 'shop',
+    'username'        => 'book',
     // 密码
-    'password'        => 'SJkYr6NbesXePf8h',
+    'password'        => 'P8KBBx6fWfebhpnL',
     // 端口
     'hostport'        => '3306',
     // 连接dsn
