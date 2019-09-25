@@ -1,20 +1,30 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
+// | ThinkPHP [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006-2018 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// [ 应用入口文件 ]
-namespace think;
+namespace think\log\driver;
 
-// 加载基础文件
-require __DIR__ . '/../thinkphp/base.php';
+/**
+ * 模拟测试输出
+ */
+class Test
+{
+    /**
+     * 日志写入接口
+     * @access public
+     * @param array $log 日志信息
+     * @return bool
+     */
+    public function save(array $log = [])
+    {
+        return true;
+    }
 
-// 支持事先使用静态方法设置Request对象和Config对象
-// 执行应用并响应
-Container::get('app')->run()->send();
+}

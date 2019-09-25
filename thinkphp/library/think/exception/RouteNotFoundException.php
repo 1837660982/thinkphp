@@ -1,20 +1,22 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
+// | ThinkPHP [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006-2018 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
+// | Author: yunwuxin <448901948@qq.com>
 // +----------------------------------------------------------------------
 
-// [ 应用入口文件 ]
-namespace think;
+namespace think\exception;
 
-// 加载基础文件
-require __DIR__ . '/../thinkphp/base.php';
+class RouteNotFoundException extends HttpException
+{
 
-// 支持事先使用静态方法设置Request对象和Config对象
-// 执行应用并响应
-Container::get('app')->run()->send();
+    public function __construct()
+    {
+        parent::__construct(404, 'Route Not Found');
+    }
+
+}
